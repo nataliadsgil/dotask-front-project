@@ -1,16 +1,63 @@
-html,
-body {
-  padding: 0;
-  margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen,
-    Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
-}
-
-a {
-  color: inherit;
-  text-decoration: none;
-}
-
 * {
-  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+.background {
+  background-color: #003355;
+  width: 100vw;
+  height: 100vh;
+}
+
+.card-login {
+  width: 400px;
+  height: 500px;
+  background-color: #f5f5f5;
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  margin-left: -200px;
+  margin-top: -250px;
+  border-radius: 5px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.card-login h2 {
+  text-align: center;
+  margin-top: 30px;
+  font-size: 28px;
+  color: #333;
+}
+
+.card-login a {
+  color: #003355;
+}
+
+.form-login {
+  display: flex;
+  flex-direction: column;
+  width: 80%;
+  margin: 10%;
+}
+
+.form-login input {
+  margin: 10px 0;
+  padding: 16px;
+  font-size: 18px;
+}
+
+.form-login button {
+  margin-top: 20px;
+  padding: 16px;
+  font-size: 18px;
+  background-color: #2a76a8;
+  color: #f5f5f5;
+  border: none;
+  border-radius: 5px;
 }
