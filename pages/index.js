@@ -1,8 +1,11 @@
 import { useState } from 'react'
 import Link from 'next/link'
+import { useRouter } from 'next/router'
 import AuthService from './api/auth'
 
 export default function Home() {
+
+  const router = useRouter();
 
   const [email, setEmail] = useState('');
   const [senha, setSenha] = useState('');
@@ -11,6 +14,9 @@ export default function Home() {
     await AuthService.login({ email, senha })
       .then(result => {
         alert("Bem-vindo(a) " + result.data.user.userName);
+        const token = result.data.user.token;
+        window.localStorage.setItem("do-task-token", token);
+        router.push("/list")
       })
       .catch(error => {
         alert(error.data.error.message);
